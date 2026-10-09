@@ -1,0 +1,4 @@
+generate_pdf.py
+*.html
+.venv/
+__pycache__/

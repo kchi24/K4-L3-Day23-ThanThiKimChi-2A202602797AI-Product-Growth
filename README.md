@@ -1,9 +1,16 @@
-# Day 23 — Đèn nào bật trước? · Operating Dashboard
+# Day 23 — Operating Dashboard · ReviewLens AI
 
-> **Bài cá nhân.** Mỗi học viên tự làm và tự nộp repo của mình (xem [SUBMISSION.md](SUBMISSION.md)).
-> **Không phải bài lập trình.** Không cần cài gì, không cần API key — chỉ cần Markdown và số liệu của sản phẩm bạn.
+- **Họ và tên:** Thân Thị Kim Chi
+- **MSSV:** 2A202602797
+- **Tên sản phẩm:** ReviewLens AI (Smart E-Commerce Review Inspector)
+- **Loại mô hình:** **B2C** (Freemium Browser Extension)
+- **Câu chốt loại:** Chúng tôi là **B2C** vì tiền đến từ người tiêu dùng cá nhân (người mua sắm online trên Shopee/Lazada chi trả gói Pro 99.000đ/tháng), chính họ là người trực tiếp cài đặt và sử dụng extension trên trình duyệt của mình để ra quyết định mua hàng, và không có bất kỳ tổ chức hay doanh nghiệp trung gian nào đứng giữa quản lý hay ăn chia doanh thu.
+- **Tài liệu nộp bài:**
+  - [Worksheet (Trạm 1–4)](worksheet.md)
+  - [Operating Dashboard (Trạm 5)](dashboard.md)
 
-Đến giờ bạn đã có mô hình tài chính (LTV, CAC, payback, NPV…) và Cost/Job của sản phẩm. Những con số đó là **bảng điểm**: chỉ biết đúng sai sau nhiều tháng. Hôm nay bạn dựng **bảng điều khiển**: vài chỉ số **báo trước** cho mô hình loại của bạn, mỗi chỉ số có ngưỡng 🟢🟡🔴 có lý do, và **luật viết sẵn** phải làm gì (và cấm làm gì) khi đèn đỏ.
+---
+
 
 ## Mục tiêu học tập
 
