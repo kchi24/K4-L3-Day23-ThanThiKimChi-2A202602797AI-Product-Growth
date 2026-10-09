@@ -66,7 +66,7 @@ Họ tên: Thân Thị Kim Chi · MSSV: 2A202602797
 
 ## Trạm 3 — Ngưỡng
 
-| # | Đèn | 🟢 | 🟡 | 🔴 | Nguồn [BM]/[MH]/[TB] | Lý do (1 câu) · ngày kiểm tra nếu [BM] |
+| # | Đèn | Xanh | Vàng | Đỏ | Nguồn [BM]/[MH]/[TB] | Lý do (1 câu) · ngày kiểm tra nếu [BM] |
 |---|---|---|---|---|---|---|
 | 1 | Đường cong retention D30 | Phẳng từ D30 (≥18%) | Dốc giảm chậm (12–18%) | Tiếp tục dốc xuống (<12%) | [TB] | Baseline nội bộ đo sau 3 cohort; đường cong phải phẳng ra thì LTV mới hội tụ và mô hình mới có nghĩa. (Dự kiến chốt baseline 30/11/2026). |
 | 2 | Activation Rate (24h) | ≥ 45% | 30% – 45% | < 30% | [TB] | Đo trên 1.200 lượt cài đặt gần nhất, tỷ lệ kích hoạt phải trên 45% để đảm bảo người dùng trải nghiệm giá trị trước khi quên extension. |
@@ -89,11 +89,11 @@ Họ tên: Thân Thị Kim Chi · MSSV: 2A202602797
 
 Phép tính:
 - Phân phối sử dụng AI luôn bị lệch đuôi (power users): 5% người dùng nặng nhất (p95) audit với tần suất cao gấp 3-4 lần.
-- Ngưỡng nguy hiểm (🔴): Nếu p95 cost vượt quá 60% ARPU = 99.000 × 60% = 59.400 VNĐ/tháng (tương đương >132 lượt audit/tháng), nhóm này sẽ nuốt sạch biên lợi nhuận đóng góp.
-- Ngưỡng an toàn (🟢): Chi phí p95 duy trì dưới 30% ARPU = 29.700 VNĐ/tháng (≤66 lượt audit/tháng).
-- Ngưỡng cảnh báo (🟡): Chi phí p95 dao động từ 30% đến 60% ARPU (29.700 VNĐ – 59.400 VNĐ).
+- Ngưỡng nguy hiểm (Đỏ): Nếu p95 cost vượt quá 60% ARPU = 99.000 × 60% = 59.400 VNĐ/tháng (tương đương >132 lượt audit/tháng), nhóm này sẽ nuốt sạch biên lợi nhuận đóng góp.
+- Ngưỡng an toàn (Xanh): Chi phí p95 duy trì dưới 30% ARPU = 29.700 VNĐ/tháng (≤66 lượt audit/tháng).
+- Ngưỡng cảnh báo (Vàng): Chi phí p95 dao động từ 30% đến 60% ARPU (29.700 VNĐ – 59.400 VNĐ).
 
-Kết quả → 🟢 < 30% (< 29.700 VNĐ) · 🟡 30% – 60% (29.700 – 59.400 VNĐ) · 🔴 > 60% (> 59.400 VNĐ).
+Kết quả → Xanh: < 30% (< 29.700 VNĐ) · Vàng: 30% – 60% (29.700 – 59.400 VNĐ) · Đỏ: > 60% (> 59.400 VNĐ).
 ```
 
 **[MH] 2 — Chi phí Free tier ÷ Tổng COGS (Đèn số 5)**
@@ -111,7 +111,7 @@ Phép tính:
 - Nếu Chi phí Free tier > 40% Tổng COGS: Gross Margin thực tế sẽ rơi tự do xuống dưới 50%.
 - Nếu Chi phí Free tier < 20% Tổng COGS: Hoàn toàn an toàn, biên gộp được bảo toàn >65%.
 
-Kết quả → 🟢 < 20% · 🟡 20% – 40% · 🔴 > 40%.
+Kết quả → Xanh: < 20% · Vàng: 20% – 40% · Đỏ: > 40%.
 ```
 
 **[MH] 3 — CAC Payback (Đèn số 7)**
@@ -128,7 +128,7 @@ Phép tính:
   CAC trần cho phép = 2,5 × 64.350 = 160.875 VNĐ.
 - Vượt quá 2,5 tháng: Tốc độ đốt tiền marketing nhanh hơn tốc độ hoàn vốn, gây rủi ro đứt gãy dòng tiền trước tháng thứ 8.
 
-Kết quả → 🟢 < 2,0 tháng · 🟡 2,0 – 2,5 tháng · 🔴 > 2,5 tháng.
+Kết quả → Xanh: < 2,0 tháng · Vàng: 2,0 – 2,5 tháng · Đỏ: > 2,5 tháng.
 ```
 
 ---

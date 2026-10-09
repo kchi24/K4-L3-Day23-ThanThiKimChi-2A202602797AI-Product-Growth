@@ -6,25 +6,25 @@
 
 ### Đèn báo sớm (Leading — nhìn hằng ngày/tuần)
 
-| Đèn | Hiện | 🟢 / 🟡 / 🔴 | Nguồn | Báo trước cho |
+| Đèn | Hiện | Xanh / Vàng / Đỏ | Nguồn | Báo trước cho |
 |---|---|---|---|---|
-| **Đường cong retention D30** | 14,2% | 🟢 Phẳng D30 (≥18%) · 🟡 Dốc chậm (12–18%) · 🔴 Dốc tiếp (<12%) | [TB] 30/11/2026 | Retention M12 & LTV |
-| **Activation Rate (24h)** | 38,5% | 🟢 ≥45% · 🟡 30%–45% · 🔴 <30% | [TB] 1.200 users | Trial → Paid & Retention D30 |
+| **Đường cong retention D30** | 14,2% | Xanh: Phẳng D30 (≥18%) · Vàng: 12–18% · Đỏ: <12% | [TB] 30/11/2026 | Retention M12 & LTV |
+| **Activation Rate (24h)** | 38,5% | Xanh: ≥45% · Vàng: 30%–45% · Đỏ: <30% | [TB] 1.200 users | Trial → Paid & Retention D30 |
 
 ### Đèn vận hành (Operating — nhìn hằng tuần/tháng)
 
-| Đèn | Hiện | 🟢 / 🟡 / 🔴 | Nguồn | Báo trước cho |
+| Đèn | Hiện | Xanh / Vàng / Đỏ | Nguồn | Báo trước cho |
 |---|---|---|---|---|
-| **p95 cost/user/tháng ÷ ARPU** ⭐ *(AI)* | 42,0% | 🟢 <30% (<29.7k) · 🟡 30%–60% · 🔴 >60% (>59.4k) | [MH] GM 65% | Gross Margin |
-| **Trial → Paid conversion** | 6,8% | 🟢 ≥8,5% · 🟡 5,0%–8,5% · 🔴 <5,0% | [BM] 27/08/2026 | Doanh thu & Payback |
-| **Chi phí Free tier ÷ Tổng COGS** ⭐ *(AI)* | 28,4% | 🟢 <20% · 🟡 20%–40% · 🔴 >40% | [MH] GM 65% | Gross Margin & Runway |
+| **p95 cost/user/tháng ÷ ARPU** ⭐ *(AI)* | 42,0% | Xanh: <30% (<29.7k) · Vàng: 30%–60% · Đỏ: >60% (>59.4k) | [MH] GM 65% | Gross Margin |
+| **Trial → Paid conversion** | 6,8% | Xanh: ≥8,5% · Vàng: 5,0%–8,5% · Đỏ: <5,0% | [BM] 27/08/2026 | Doanh thu & Payback |
+| **Chi phí Free tier ÷ Tổng COGS** ⭐ *(AI)* | 28,4% | Xanh: <20% · Vàng: 20%–40% · Đỏ: >40% | [MH] GM 65% | Gross Margin & Runway |
 
 ### Đèn kết quả (Lagging — nhìn hằng quý)
 
-| Đèn | Hiện | 🟢 / 🟡 / 🔴 | Nguồn |
+| Đèn | Hiện | Xanh / Vàng / Đỏ | Nguồn |
 |---|---|---|---|
-| **Gross Margin (Biên gộp)** | 58,2% | 🟢 ≥65% · 🟡 50%–65% · 🔴 <50% | [MH] Mô hình tài chính Day 24 |
-| **CAC Payback (tháng)** | 2,2 tháng | 🟢 <2,0 tháng · 🟡 2,0–2,5 tháng · 🔴 >2,5 tháng | [MH] Runway 12 tháng, ARPU 99k |
+| **Gross Margin (Biên gộp)** | 58,2% | Xanh: ≥65% · Vàng: 50%–65% · Đỏ: <50% | [MH] Mô hình tài chính Day 24 |
+| **CAC Payback (tháng)** | 2,2 tháng | Xanh: <2,0 tháng · Vàng: 2,0–2,5 tháng · Đỏ: >2,5 tháng | [MH] Runway 12 tháng, ARPU 99k |
 
 ### 5 luật quyết định (⏹ = luật dừng)
 
