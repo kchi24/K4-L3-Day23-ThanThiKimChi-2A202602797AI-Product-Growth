@@ -49,8 +49,8 @@ Chưa có mô hình tài chính hoặc Cost/Job? Bạn vẫn đọc và làm đ�
 |---|---|---|
 | 1 | Chốt loại mô hình & lấy bảng đèn | 15' |
 | 2 | Dựng cây 3 tầng (6–8 thẻ đèn) | 25' |
-| 3 | **Đặt ngưỡng** — mỗi đèn có nguồn và lý do | 30' ⭐ |
-| 4 | **Viết 5 luật quyết định** — ≥2 luật dừng | 30' ⭐ |
+| 3 | **Đặt ngưỡng** — mỗi đèn có nguồn và lý do | 30' |
+| 4 | **Viết 5 luật quyết định** — ≥2 luật dừng | 30' |
 | 5 | Cổng gác 90 ngày & ráp dashboard 1 trang | 20' |
 
 Bấm giờ từng trạm. Hết giờ thì sang trạm sau, quay lại hoàn thiện ở Trạm 5.

@@ -32,16 +32,16 @@ Họ tên: Thân Thị Kim Chi · MSSV: 2A202602797
 
 ### 2. Bảng đèn §3 của loại mình (B2C — §3.1 HANDBOOK):
 
-| Đèn | ✅ / 🔧 / ❌ | Số nằm ở đâu / cần gì để đo |
+| Đèn | Trạng thái (Đo được / 2 tuần / Chưa) | Số nằm ở đâu / cần gì để đo |
 |---|---|---|
-| **Đường cong retention có phẳng không** ⭐ | ✅ | Đo được hôm nay. Nằm trong Mixpanel cohort retention report (theo dõi cohort D1, D7, D14, D30, D60). |
-| **Activation rate** | ✅ | Đo được hôm nay. Database event log: % user hoàn thành ≥1 lần tóm tắt review (aha moment) trong 24h đầu sau khi cài extension. |
-| **p95 cost/user/tháng ÷ ARPU** | 🔧 | Đo được trong 2 tuần. Cần viết cron job tổng hợp log token inference theo User ID từ Langfuse sang Google Sheet tài chính mỗi sáng thứ Hai. |
-| **Trial → paid** | ✅ | Đo được hôm nay. Báo cáo conversion rate từ webhook cổng thanh toán PayOS / database subscription. |
-| **Retention M12** | ❌ | Chưa đo được. Sản phẩm mới ra mắt 3 tháng, chưa có cohort nào đạt vòng đời 12 tháng; cần thêm 9 tháng nữa để có số thực tế. |
-| **Chi phí free tier ÷ tổng COGS** | ✅ | Đo được hôm nay. Dashboard quản lý chi phí API LLM (phân tách rõ tag traffic: user_free vs user_pro). |
-| **Tỷ lệ refund** | ✅ | Đo được hôm nay. Báo cáo giao dịch hoàn tiền hàng tháng từ cổng thanh toán PayOS. |
-| **LTV/CAC · CAC payback · GM** | 🔧 | Đo được trong 2 tuần. Hiện đang tính thủ công trên bảng Excel mô hình tài chính Day 24; cần 2 tuần để tích hợp pipeline tự động kéo số doanh thu và chi phí ads. |
+| **Đường cong retention có phẳng không** | [Đo được] | Đo được hôm nay. Nằm trong Mixpanel cohort retention report (theo dõi cohort D1, D7, D14, D30, D60). |
+| **Activation rate** | [Đo được] | Đo được hôm nay. Database event log: % user hoàn thành ≥1 lần tóm tắt review (aha moment) trong 24h đầu sau khi cài extension. |
+| **p95 cost/user/tháng ÷ ARPU** | [Trong 2 tuần] | Đo được trong 2 tuần. Cần viết cron job tổng hợp log token inference theo User ID từ Langfuse sang Google Sheet tài chính mỗi sáng thứ Hai. |
+| **Trial → paid** | [Đo được] | Đo được hôm nay. Báo cáo conversion rate từ webhook cổng thanh toán PayOS / database subscription. |
+| **Retention M12** | [Chưa đo được] | Chưa đo được. Sản phẩm mới ra mắt 3 tháng, chưa có cohort nào đạt vòng đời 12 tháng; cần thêm 9 tháng nữa để có số thực tế. |
+| **Chi phí free tier ÷ tổng COGS** | [Đo được] | Đo được hôm nay. Dashboard quản lý chi phí API LLM (phân tách rõ tag traffic: user_free vs user_pro). |
+| **Tỷ lệ refund** | [Đo được] | Đo được hôm nay. Báo cáo giao dịch hoàn tiền hàng tháng từ cổng thanh toán PayOS. |
+| **LTV/CAC · CAC payback · GM** | [Trong 2 tuần] | Đo được trong 2 tuần. Hiện đang tính thủ công trên bảng Excel mô hình tài chính Day 24; cần 2 tuần để tích hợp pipeline tự động kéo số doanh thu và chi phí ads. |
 
 
 ---
@@ -54,9 +54,9 @@ Họ tên: Thân Thị Kim Chi · MSSV: 2A202602797
 |---|---|---|---|---|---|---|
 | 1 | L | **Đường cong retention D30** | Đếm % user trong cohort còn quay lại thực hiện ≥1 lần audit ở ngày thứ 30. **Không** đếm user chỉ mở trình duyệt nhưng không bấm audit sản phẩm. | (Active users ngày 30 của cohort) ÷ (Tổng user cài extension ở D0 của cohort) | Hằng tuần · Product Data Lead | Retention M12 & LTV (Tầng O/G) |
 | 2 | L | **Activation Rate (24h)** | Đếm % user mới thực hiện thành công lần audit đầu tiên (aha moment) trong vòng 24 giờ kể từ lúc cài extension. **Không** đếm lượt cài đặt rồi để đó hoặc lỗi trích xuất DOM. | (Số user thực hiện ≥1 audit thành công trong 24h) ÷ (Tổng số user mới cài đặt) | Hằng ngày · Growth Lead | Trial → Paid & Retention D30 (Tầng O) |
-| 3 | O | **p95 cost/user/tháng ÷ ARPU** ⭐ *(Đèn chi phí AI)* | Đếm tỷ lệ chi phí token suy luận AI của user ở phân vị 95 (user dùng nặng nhất) so với mức ARPU 99.000đ. **Không** lấy mức chi phí trung bình (mean) vì bị lệch mẫu. | (Chi phí inference tháng của user tại p95) ÷ ARPU | Hằng tuần · Tech Lead / AI Eng | Gross Margin (Tầng G) |
+| 3 | O | **p95 cost/user/tháng ÷ ARPU** *(Đèn chi phí AI)* | Đếm tỷ lệ chi phí token suy luận AI của user ở phân vị 95 (user dùng nặng nhất) so với mức ARPU 99.000đ. **Không** lấy mức chi phí trung bình (mean) vì bị lệch mẫu. | (Chi phí inference tháng của user tại p95) ÷ ARPU | Hằng tuần · Tech Lead / AI Eng | Gross Margin (Tầng G) |
 | 4 | O | **Trial → Paid conversion rate** | Đếm % user kích hoạt dùng thử 7 ngày chuyển đổi thành công sang thanh toán chu kỳ đầu tiên. **Không** đếm các giao dịch thanh toán thất bại hoặc thẻ bị từ chối. | (Số user trả tiền chu kỳ 1) ÷ (Số user đăng ký trial 7 ngày) | Hằng tháng · Growth Lead | Doanh thu & CAC Payback (Tầng G) |
-| 5 | O | **Chi phí Free tier ÷ Tổng COGS** ⭐ *(Đèn chi phí AI)* | Đếm tỷ lệ chi phí API token tiêu tốn bởi nhóm người dùng miễn phí trên tổng chi phí biến đổi (COGS). **Không** tính chi phí server cố định. | (Tổng chi phí token của Free users) ÷ (Tổng COGS AI + server trong kỳ) | Hằng tháng · Tech Lead / Finance | Gross Margin & Runway (Tầng G) |
+| 5 | O | **Chi phí Free tier ÷ Tổng COGS** *(Đèn chi phí AI)* | Đếm tỷ lệ chi phí API token tiêu tốn bởi nhóm người dùng miễn phí trên tổng chi phí biến đổi (COGS). **Không** tính chi phí server cố định. | (Tổng chi phí token của Free users) ÷ (Tổng COGS AI + server trong kỳ) | Hằng tháng · Tech Lead / Finance | Gross Margin & Runway (Tầng G) |
 | 6 | G | **Gross Margin (Biên lợi nhuận gộp)** | Đếm tỷ lệ doanh thu thuần còn lại sau khi trừ toàn bộ chi phí biến đổi (token AI, hosting, phí cổng thanh toán). **Không** trừ chi phí lương cố định và marketing. | (Doanh thu thuần − COGS) ÷ Doanh thu thuần | Hằng quý · CEO / Founder | Khả năng tự chủ tài chính & Runway |
 | 7 | G | **CAC Payback (thời gian thu hồi vốn CAC)** | Đếm số tháng cần thiết để lãi gộp tạo ra từ một khách hàng trả phí bù đắp đủ chi phí thu hút khách hàng đó (CAC). **Không** tính doanh thu gộp chưa trừ chi phí inference. | CAC ÷ (ARPU × Gross Margin %) | Hằng quý · CEO / Growth Lead | Runway & Hiệu quả vốn |
 
@@ -135,11 +135,11 @@ Kết quả → Xanh: < 2,0 tháng · Vàng: 2,0 – 2,5 tháng · Đỏ: > 2,5 
 
 ## Trạm 4 — 5 luật quyết định
 
-Đánh dấu ⏹ cho luật dừng (bắt buộc ≥2 luật dừng).
+Đánh dấu [DỪNG] cho luật dừng (bắt buộc ≥2 luật dừng).
 
-1. ⏹ **NẾU** đường cong retention chưa phẳng sau D30 (tỷ lệ duy trì < 12%) **TRONG** 2 cohort liên tiếp **VÀ** mỗi cohort có quy mô ≥ 200 user mới **THÌ** đóng băng 100% ngân sách quảng cáo acquisition trong 3 tuần và chuyển toàn bộ đội ngũ kỹ thuật sang tối ưu luồng onboarding và độ chính xác của tóm tắt review **KHÔNG THÌ** tuyệt đối không được tăng tiền chạy ads TikTok/Facebook để bù đắp lượng user rời bỏ.
-2. ⏹ **NẾU** chi phí Free tier vượt quá 40% tổng COGS **TRONG** 2 tuần liên tiếp **THÌ** hạ ngay hạn mức dùng thử miễn phí từ 5 lượt/ngày xuống 2 lượt/ngày và bắt buộc đăng nhập tài khoản để giới hạn abuse token **KHÔNG THÌ** không được nới rộng quota free hoặc thả nổi truy cập ẩn danh nhằm mục đích tăng trưởng ảo số lượng người dùng.
+1. [DỪNG] **NẾU** đường cong retention chưa phẳng sau D30 (tỷ lệ duy trì < 12%) **TRONG** 2 cohort liên tiếp **VÀ** mỗi cohort có quy mô ≥ 200 user mới **THÌ** đóng băng 100% ngân sách quảng cáo acquisition trong 3 tuần và chuyển toàn bộ đội ngũ kỹ thuật sang tối ưu luồng onboarding và độ chính xác của tóm tắt review **KHÔNG THÌ** tuyệt đối không được tăng tiền chạy ads TikTok/Facebook để bù đắp lượng user rời bỏ.
+2. [DỪNG] **NẾU** chi phí Free tier vượt quá 40% tổng COGS **TRONG** 2 tuần liên tiếp **THÌ** hạ ngay hạn mức dùng thử miễn phí từ 5 lượt/ngày xuống 2 lượt/ngày và bắt buộc đăng nhập tài khoản để giới hạn abuse token **KHÔNG THÌ** không được nới rộng quota free hoặc thả nổi truy cập ẩn danh nhằm mục đích tăng trưởng ảo số lượng người dùng.
 3. **NẾU** p95 cost/user/tháng vượt quá 60% ARPU (> 59.400đ) **TRONG** 1 tháng thanh toán **THÌ** áp dụng chính sách sử dụng hợp lý (FUP trần 100 lượt audit/ngày) và triển khai gói cước Pro Max riêng biệt cho power user **KHÔNG THÌ** không được tăng giá gói Pro cơ bản lên toàn bộ người dùng thông thường vì sẽ làm sụp đổ tỷ lệ giữ chân của 90% khách hàng dùng ít.
-4. **NẾU** tỷ lệ Trial → Paid giảm xuống dưới 5,0% **TRÊN** 3 đợt thử nghiệm giao diện paywall liên tiếp **VÀ** mẫu thử nghiệm đạt ≥ 150 trial users **THÌ** quay lại tái cấu trúc value metric và định vị lại tính năng cốt lõi kích hoạt nhu cầu (soát review seeding vs tóm tắt thông số) **KHÔNG THÌ** không được tự ý giảm giá gói cước dưới mức sàn 79.000đ/tháng làm phá vỡ neo giá thương hiệu.
-5. ⏹ **NẾU** CAC Payback vượt quá 2,5 tháng **TRONG** 2 tháng liên tiếp **THÌ** cắt giảm ngay 50% ngân sách chiến dịch quảng cáo trả phí kém hiệu quả và chuyển trọng tâm sang kênh organic SEO Chrome Web Store và chương trình giới thiệu người dùng (Referral) **KHÔNG THÌ** không được duy trì chi tiêu marketing theo kế hoạch cũ với hy vọng LTV dài hạn sẽ tự động bù đắp lại.
+4. **NẾU** tỷ lệ Trial → Paid giảm xuống dưới 5,0% **TRÊN** 3 đợt thử nghiệm giao diện paywall liên tiếp **VÀ** mẫu thử nghiệm đạt ≥ 150 trial users **THÌ** đổi ngay đơn vị tính tiền paywall từ thuê bao ngày sang gói số lượt audit (50 lượt/gói) và tinh gọn onboarding còn 1 bước test thử sản phẩm **KHÔNG THÌ** không được tự ý giảm giá gói cước dưới mức sàn 79.000đ/tháng làm phá vỡ neo giá thương hiệu.
+5. [DỪNG] **NẾU** CAC Payback vượt quá 2,5 tháng **TRONG** 2 tháng liên tiếp **THÌ** cắt giảm ngay 50% ngân sách chiến dịch quảng cáo trả phí kém hiệu quả và chuyển trọng tâm sang kênh organic SEO Chrome Web Store và chương trình giới thiệu người dùng (Referral) **KHÔNG THÌ** không được duy trì chi tiêu marketing theo kế hoạch cũ với hy vọng LTV dài hạn sẽ tự động bù đắp lại.
 
